@@ -11,7 +11,7 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Set environment variables
-ENV telegram_access_token=6953324907:AAFzuTEQs4oXWmDugO2FhrFDiJsBjkw6rqw
+ENV telegram_access_token=6953324907:AAFMTZfXrOGafblQ1KBhfB8BU9fMepWxNRw
 ENV BASICURL=https://chatgpt.hkbu.edu.hk/general/rest
 ENV MODELNAME=gpt-4-turbo
 ENV APIVERSION=2024-02-15-preview
