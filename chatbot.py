@@ -40,12 +40,6 @@ def main():
     # To start the bot:
     updater.start_polling()
     updater.idle()
-    
-def echo(update, context):
-    reply_message = update.message.text.upper()
-    logging.info("Update: " + str(update))
-    logging.info("context: " + str(context))
-    context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
 
 def equiped_chatgpt(update, context):
     global chatgpt
@@ -77,6 +71,12 @@ class HKBU_GPT():
             return data['choices'][0]['message']['content']
         else:
             return 'Error:', response
+def echo(update, context):
+    reply_message = update.message.text.upper()
+    logging.info("Update: " + str(update))
+    logging.info("context: " + str(context))
+    context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
+
         
 if __name__ == '__main__':
     main()
